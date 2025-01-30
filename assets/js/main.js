@@ -201,4 +201,21 @@
 
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.curso-principal').forEach(curso => {
+      const toggleElement = curso.querySelector('.curso-toggle');
+      const subcursos = curso.querySelector('.subcursos');
+
+      if (toggleElement && subcursos) {
+        toggleElement.addEventListener('click', () => {
+          subcursos.classList.toggle('visible');
+        });
+      }
+    });
+  });
+  
 })();
+
+
+
+

@@ -1066,6 +1066,27 @@ section,
   color: var(--accent-color);
 }
 
+.subcursos {
+  display: none;
+  margin-top: -8px;
+  overflow: hidden;
+  transition: .2s;
+  margin-left: 20px;
+}
+
+.subcursos.visible {
+  display: block;
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+.curso-toggle {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
