@@ -1097,6 +1097,24 @@ section,
   text-align: center;
 }
 
+.img-fluid {
+  width: 1024px; /* Ajusta el ancho según sea necesario */
+  height: 200px; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Opcional: agrega bordes redondeados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-fluid img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
