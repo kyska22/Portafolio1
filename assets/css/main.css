@@ -1097,7 +1097,7 @@ section,
   text-align: center;
 }
 
-.img-fluid {
+.portfolio-content .img-fluid {
   width: 1024px; /* Ajusta el ancho según sea necesario */
   height: 200px; /* Ajusta la altura según sea necesario */
   overflow: hidden;
@@ -1108,7 +1108,7 @@ section,
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.img-fluid img {
+.portfolio-content .img-fluid img {
   width: 80%;
   height: 80%;
   object-fit: cover;
