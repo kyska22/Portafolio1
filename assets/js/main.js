@@ -201,21 +201,67 @@
 
   });
 
+  document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('curso-toggle')) {
+      const curso = event.target.closest('.curso-principal');
+      const subcursos = curso.querySelector('.subcursos');
+  
+      if (subcursos) {
+        subcursos.classList.toggle('visible');
+      }
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.curso-principal').forEach(curso => {
       const toggleElement = curso.querySelector('.curso-toggle');
       const subcursos = curso.querySelector('.subcursos');
-
+  
       if (toggleElement && subcursos) {
         toggleElement.addEventListener('click', () => {
+          console.log('Se hizo clic en curso-toggle');
           subcursos.classList.toggle('visible');
+          console.log('Clases actuales de subcursos:', subcursos.classList);
         });
       }
     });
   });
   
+
+
+//  document.addEventListener('DOMContentLoaded', () => {
+//    document.querySelectorAll('.curso-principal').forEach(curso => {
+//      const toggleElement = curso.querySelector('.curso-toggle');
+//      const subcursos = curso.querySelector('.subcursos');
+
+//      if (toggleElement && subcursos) {
+//        toggleElement.addEventListener('click', () => {
+//          subcursos.classList.toggle('visible');
+//        });
+//      }
+//    });
+//  });
+  
 })();
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const cursos = document.querySelectorAll('.curso-principal');
+  console.log("Cursos encontrados:", cursos); // Verifica si se están encontrando los cursos
+
+  cursos.forEach(curso => {
+    const toggleElement = curso.querySelector('.curso-toggle');
+    const subcursos = curso.querySelector('.subcursos');
+
+    console.log("Toggle encontrado:", toggleElement);
+    console.log("Subcursos encontrados:", subcursos);
+
+    if (toggleElement && subcursos) {
+      toggleElement.addEventListener('click', () => {
+        subcursos.classList.toggle('visible');
+      });
+    }
+  });
+});
 
 

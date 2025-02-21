@@ -1067,19 +1067,21 @@ section,
 }
 
 .subcursos {
-  display: none;
-  margin-top: -8px;
+  opacity: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: .2s;
+  transition: opacity 0.2s ease, max-height 0.2s ease;
+  margin-top: -8px;
   margin-left: 20px;
+  padding: 0;
 }
 
 .subcursos.visible {
-  display: block;
-  height: fit-content;
   opacity: 1;
+  max-height: 500px; /* Un valor suficientemente alto para acomodar el contenido */
   padding: 24px;
 }
+
 
 .curso-toggle {
   cursor: pointer;
