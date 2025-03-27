@@ -922,6 +922,11 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.resume .resume-item img {
+  width: 400px;
+  height: 450px;
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
