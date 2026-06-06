@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Project Details - Kyska Harrington</title>
+    <title>Skill Details - Kyska Harrington</title>
     <meta
-      id="project-meta-description"
+      id="skill-meta-description"
       name="description"
-      content="Project case study from Kyska Harrington's cloud and technology portfolio."
+      content="Explore a knowledge area from Kyska Harrington's professional learning path."
     />
 
     <!-- Favicons -->
@@ -30,11 +30,10 @@
       sizes="180x180"
     />
     <link href="assets/img/site.webmanifest" rel="manifest" />
-
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -47,11 +46,10 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="portfolio-details-page">
+  <body class="skill-details-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
@@ -66,7 +64,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="portfolio.html" class="active">Projects</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -80,9 +78,9 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
-                <h1 id="project-title">Project Details</h1>
-                <p id="project-summary" class="mb-0">
-                  Loading project information...
+                <h1 id="skill-title">Skill Details</h1>
+                <p id="skill-summary" class="mb-0">
+                  Loading knowledge area...
                 </p>
               </div>
             </div>
@@ -92,93 +90,70 @@
           <div class="container">
             <ol>
               <li><a href="index.html">Home</a></li>
-              <li><a href="portfolio.html">Projects</a></li>
-              <li id="project-breadcrumb" class="current">Details</li>
+              <li><a href="services.html">Skills</a></li>
+              <li id="skill-breadcrumb" class="current">Details</li>
             </ol>
           </div>
         </nav>
       </div>
 
-      <section id="portfolio-details" class="portfolio-details section">
+      <section class="skill-detail section">
         <div
-          id="project-content"
+          id="skill-content"
           class="container"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="project-visual">
-                <img
-                  id="project-image"
-                  src=""
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-
-              <div class="portfolio-description">
-                <h2 id="project-heading"></h2>
-                <p id="project-description"></p>
-
-                <h3>Challenge</h3>
-                <p id="project-challenge"></p>
-
-                <h3>Solution</h3>
-                <p id="project-solution"></p>
-
-                <h3>Key Highlights</h3>
-                <ul id="project-highlights" class="project-highlights"></ul>
+          <div class="row gy-4 align-items-start">
+            <div class="col-lg-5">
+              <div class="skill-detail-visual">
+                <img id="skill-image" src="" alt="" class="img-fluid" />
               </div>
             </div>
 
-            <div class="col-lg-4">
-              <div
-                class="portfolio-info"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <h3>Project Information</h3>
-                <ul>
-                  <li>
-                    <strong>Category</strong>:
-                    <span id="project-category"></span>
-                  </li>
-                  <li>
-                    <strong>Role</strong>: <span id="project-role"></span>
-                  </li>
-                  <li>
-                    <strong>Technologies</strong>:
-                    <span id="project-technologies"></span>
-                  </li>
-                </ul>
+            <div class="col-lg-7">
+              <span id="skill-label" class="skill-detail-label"></span>
+              <h2 id="skill-heading"></h2>
+              <p id="skill-description" class="skill-detail-intro"></p>
 
-                <a
-                  id="project-link"
-                  class="project-external-link"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-box-arrow-up-right"></i>
-                  <span id="project-link-label">View Project</span>
-                </a>
+              <div class="skill-detail-panel">
+                <h3>How This Supports Solution Architecture</h3>
+                <p id="skill-architecture"></p>
               </div>
-
-              <a class="project-back-link" href="portfolio.html">
-                <i class="bi bi-arrow-left"></i> Back to all projects
-              </a>
             </div>
+          </div>
+
+          <div class="row gy-4 mt-3">
+            <div class="col-lg-6">
+              <div class="skill-detail-panel h-100">
+                <h3>Practical Experience</h3>
+                <ul id="skill-experience" class="skill-detail-list"></ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="skill-detail-panel h-100">
+                <h3>Selected Learning</h3>
+                <ul id="skill-learning" class="skill-detail-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a class="project-back-link" href="services.html">
+              <i class="bi bi-arrow-left"></i> Back to all skills
+            </a>
           </div>
         </div>
 
-        <div id="project-not-found" class="container text-center d-none">
-          <h2>Project not found</h2>
+        <div id="skill-not-found" class="container text-center d-none">
+          <h2>Skill not found</h2>
           <p>
-            The requested case study does not exist or the link is incomplete.
+            The requested knowledge area does not exist or the link is
+            incomplete.
           </p>
-          <a class="project-external-link" href="portfolio.html">
-            Return to Projects
+          <a class="project-external-link" href="services.html">
+            Return to Skills
           </a>
         </div>
       </section>
@@ -230,7 +205,7 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/js/project-details.js"></script>
+    <script src="assets/js/skill-details.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

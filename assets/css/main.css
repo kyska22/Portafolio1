@@ -98,8 +98,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  max-height: 42px;
+  margin-right: 10px;
 }
 
 .header .logo h1 {
@@ -188,6 +188,10 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+  .header .logo img {
+    max-height: 36px;
+  }
+
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -322,11 +326,6 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
-}
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -394,45 +393,6 @@ h6 {
   visibility: visible;
   opacity: 1;
   bottom: 15px;
-}
-
-/* Cursos / Subcursos toggle styles */
-.cursos {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.cursos .curso-principal {
-  display: block;
-  width: 100%;
-}
-
-.cursos .curso-toggle {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.cursos .subcursos {
-  /* use max-height transition for smooth slide down/up */
-  max-height: 0;
-  overflow: hidden;
-  list-style: none;
-  margin: 8px 0 0 22px; /* indent under the parent */
-  padding-left: 0;
-  clear: both; /* ensure it appears below, not floated aside */
-  opacity: 0;
-  transition: max-height 320ms ease, opacity 200ms ease;
-}
-
-.cursos .subcursos.visible {
-  opacity: 1;
-  max-height: 500px;
-  padding: 24px;
-}
-
-.cursos .subcursos li {
-  margin-bottom: 6px;
 }
 
 /*--------------------------------------------------------------
@@ -714,47 +674,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Interests Section
---------------------------------------------------------------*/
-.interests .features-item {
-  background-color: var(--surface-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  position: relative;
-}
-
-.interests .features-item i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 0;
-}
-
-.interests .features-item h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.interests .features-item h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.interests .features-item:hover {
-  border-color: var(--accent-color);
-}
-
-.interests .features-item:hover h3 a {
-  color: var(--accent-color);
-}
-
-
-/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -897,69 +816,222 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+# Skill Details Section
 --------------------------------------------------------------*/
-.service-details .services-list {
+.skill-detail .skill-detail-visual {
+  overflow: hidden;
   background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 14px;
 }
 
-.service-details .services-list a {
+.skill-detail .skill-detail-visual img {
   display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
+  width: 100%;
+  min-height: 320px;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.skill-detail .skill-detail-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skill-detail h2 {
+  margin-bottom: 18px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.skill-detail .skill-detail-intro,
+.skill-detail .skill-detail-panel p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
+  line-height: 1.8;
 }
 
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
+.skill-detail .skill-detail-panel {
+  padding: 28px;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 14px;
 }
 
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
+.skill-detail .skill-detail-panel h3 {
+  margin-bottom: 16px;
   font-size: 20px;
   font-weight: 700;
 }
 
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
+.skill-detail .skill-detail-list {
+  margin: 0;
   padding: 0;
-  font-size: 15px;
+  list-style: none;
 }
 
-.service-details ul li {
-  padding: 5px 0;
+.skill-detail .skill-detail-list li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  line-height: 1.6;
+}
+
+.skill-detail .skill-detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.skill-detail .skill-detail-list i {
+  margin-top: 4px;
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Professional Journey Section
+--------------------------------------------------------------*/
+.journey .journey-intro {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.journey .journey-intro > span,
+.journey .journey-direction span {
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.journey .journey-intro h2,
+.journey .journey-direction h2 {
+  margin: 12px 0 18px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.journey .journey-intro p,
+.journey .journey-direction p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.8;
+}
+
+.journey .journey-timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.journey .journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 27px;
+  width: 2px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.journey .journey-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.journey .journey-marker {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  font-size: 22px;
 }
 
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
+.journey .journey-card,
+.journey .journey-direction {
+  padding: 30px;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 14px;
+}
+
+.journey .journey-period {
   color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.journey .journey-card h3 {
+  margin: 8px 0 14px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.journey .journey-card p,
+.journey .journey-card li {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.7;
+}
+
+.journey .journey-card ul {
+  margin-bottom: 0;
+}
+
+.journey .journey-direction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 950px;
+  margin: 60px auto 0;
+}
+
+.journey .journey-direction > div:first-child {
+  max-width: 650px;
+}
+
+.journey .journey-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .journey .journey-item {
+    gap: 14px;
+  }
+
+  .journey .journey-card {
+    padding: 22px;
+  }
+
+  .journey .journey-direction {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .journey .journey-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 /*--------------------------------------------------------------
