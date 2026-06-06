@@ -674,6 +674,86 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Interests Section
+--------------------------------------------------------------*/
+.interests .features-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 92px;
+  height: 100%;
+  padding: 22px;
+  overflow: hidden;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.interests .features-item::after {
+  position: absolute;
+  right: -35px;
+  bottom: -45px;
+  width: 100px;
+  height: 100px;
+  content: "";
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.interests .features-item:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 30%);
+  box-shadow: 0 14px 32px rgba(24, 210, 110, 0.12);
+}
+
+.interests .features-item:hover::after {
+  transform: scale(1.25);
+}
+
+.interests .features-item i {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  margin-right: 16px;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.interests .features-item h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.interests .features-item h3 a {
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+.interests .features-item:hover h3 a {
+  color: var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .interests .features-item {
+    min-height: 80px;
+    padding: 18px;
+  }
+
+  .interests .features-item i {
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -735,6 +815,236 @@ section,
 .resume .resume-item img {
   width: 400px;
   height: 450px;
+}
+
+.credentials-intro {
+  max-width: 720px;
+  margin: -8px auto 28px;
+  text-align: center;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.credly-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.credly-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 16px 12px;
+  text-align: center;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 14px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.credly-badge-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  box-shadow: 0 12px 28px rgba(24, 210, 110, 0.12);
+}
+
+.credly-badge-card img {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.credly-badge-card span {
+  color: var(--heading-color);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.credly-badge-card small {
+  margin-top: 6px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.credly-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.credentials-profile-action {
+  text-align: center;
+}
+
+.professional-achievements .resume-title {
+  margin: 0 0 24px;
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.professional-achievements .credentials-profile-action + .resume-title {
+  margin-top: 64px;
+}
+
+.campus-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.campus-event-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  align-items: center;
+  min-height: 310px;
+  padding: 24px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  border-radius: 14px;
+}
+
+.campus-event-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.campus-event-card div {
+  padding: 0 20px 0 0;
+}
+
+.campus-event-card span {
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.campus-event-card h4 {
+  margin: 7px 0 0;
+  color: var(--heading-color);
+  font-size: 22px;
+}
+
+@media (max-width: 1199px) {
+  .credly-badges-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .campus-event-card {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-event-card div {
+    padding: 0 0 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .credly-badges-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .credly-badge-card img {
+    width: 78px;
+    height: 78px;
+  }
+
+  .campus-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-event-card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .campus-event-card img {
+    height: auto;
+    max-height: 420px;
+  }
+}
+
+.resume .certification-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 26px;
+}
+
+.resume .certification-badge {
+  flex: 0 0 118px;
+  position: relative;
+  z-index: 1;
+}
+
+.resume .resume-item .certification-badge img {
+  display: block;
+  width: 118px;
+  height: 118px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.resume .resume-item .certification-badge:hover img {
+  transform: scale(1.06);
+}
+
+.resume .certification-content {
+  min-width: 0;
+}
+
+.resume .certification-content h4 {
+  line-height: 1.35;
+}
+
+.resume .certification-content p {
+  margin-bottom: 10px;
+}
+
+.resume .certification-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resume .certification-link:hover {
+  color: color-mix(in srgb, var(--accent-color), white 20%);
+}
+
+@media (max-width: 575px) {
+  .resume .certification-item {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .resume .certification-badge {
+    flex-basis: 88px;
+  }
+
+  .resume .resume-item .certification-badge img {
+    width: 88px;
+    height: 88px;
+  }
 }
 
 /*--------------------------------------------------------------
