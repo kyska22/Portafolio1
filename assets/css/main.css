@@ -518,6 +518,44 @@ h6 {
   bottom: 15px;
 }
 
+/* Cursos / Subcursos toggle styles */
+.cursos {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cursos .curso-principal {
+  display: block;
+  width: 100%;
+}
+
+.cursos .curso-toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.cursos .subcursos {
+  /* use max-height transition for smooth slide down/up */
+  max-height: 0;
+  overflow: hidden;
+  list-style: none;
+  margin: 8px 0 0 22px; /* indent under the parent */
+  padding-left: 0;
+  clear: both; /* ensure it appears below, not floated aside */
+  opacity: 0;
+  transition: max-height 320ms ease, opacity 200ms ease;
+}
+
+.cursos .subcursos.visible {
+  opacity: 1;
+  /* max-height will be set from JS to the content height for a smooth animation */
+}
+
+.cursos .subcursos li {
+  margin-bottom: 6px;
+}
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -1104,22 +1142,222 @@ section,
   text-align: center;
 }
 
-.portfolio-content .img-fluid {
-  width: 1024px; /* Ajusta el ancho según sea necesario */
-  height: 200px; /* Ajusta la altura según sea necesario */
+/* Estilos modernos de tarjetas para el portafolio (Glassmorphism & 3D Book Covers) */
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
   overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.3s ease;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px; /* Opcional: agrega bordes redondeados */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.portfolio-content .img-fluid img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
+              0 0 15px rgba(24, 210, 110, 0.15);
+  border-color: rgba(24, 210, 110, 0.4);
 }
+
+/* Contenedor de imágenes para proyectos generales (formato horizontal) */
+.portfolio-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* Contenedor de portadas de libros en 3D (formato vertical con perspectiva) */
+.book-3d-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  padding: 20px 0;
+  perspective: 1000px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.book-3d-cover {
+  width: 126px; /* Relación de aspecto ~1:1.6 para portadas */
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-15deg);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), 
+              -1px 0px 3px rgba(255, 255, 255, 0.1);
+  border-radius: 2px 4px 4px 2px;
+}
+
+/* Efecto de relieve y lomo realista del libro */
+.book-3d-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, 
+    rgba(0, 0, 0, 0.45) 0%, 
+    rgba(0, 0, 0, 0.0) 4%, 
+    rgba(255, 255, 255, 0.15) 6%, 
+    rgba(255, 255, 255, 0.0) 12%,
+    rgba(0, 0, 0, 0.0) 96%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 2px 4px 4px 2px;
+}
+
+.book-3d-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px 4px 4px 2px;
+  z-index: 1;
+}
+
+/* Grosor del lomo en 3D */
+.book-3d-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 100%;
+  background: #222;
+  transform: rotateY(-90deg) translateZ(6px);
+  transform-origin: left center;
+  box-shadow: inset -1px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-card:hover .book-3d-cover {
+  transform: rotateY(0deg) scale(1.05);
+  box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Cuerpo de la tarjeta */
+.portfolio-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Insignias de Categoría (Badges) */
+.portfolio-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
+.portfolio-card-body h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--heading-color);
+  line-height: 1.4;
+}
+
+.portfolio-card-body p {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portfolio-card-footer {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* Botones del Portafolio */
+.btn-portfolio {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  background: transparent;
+}
+
+.btn-portfolio:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.btn-portfolio-primary {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.btn-portfolio-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
+}
+
+.btn-portfolio-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 
 
 .portfolio .portfolio-filters li {

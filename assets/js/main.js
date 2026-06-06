@@ -1,61 +1,67 @@
 /**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Nov 04 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Personal
+ * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+ * Updated: Nov 04 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
-(function() {
+(function () {
   "use strict";
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    const selectBody = document.querySelector("body");
+    const selectHeader = document.querySelector("#header");
+    if (
+      !selectHeader.classList.contains("scroll-up-sticky") &&
+      !selectHeader.classList.contains("sticky-top") &&
+      !selectHeader.classList.contains("fixed-top")
+    )
+      return;
+    window.scrollY > 100
+      ? selectBody.classList.add("scrolled")
+      : selectBody.classList.remove("scrolled");
   }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  document.addEventListener("scroll", toggleScrolled);
+  window.addEventListener("load", toggleScrolled);
 
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+    document.querySelector("body").classList.toggle("mobile-nav-active");
+    mobileNavToggleBtn.classList.toggle("bi-list");
+    mobileNavToggleBtn.classList.toggle("bi-x");
   }
   if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
   }
 
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
+  document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+    navmenu.addEventListener("click", () => {
+      if (document.querySelector(".mobile-nav-active")) {
         mobileNavToogle();
       }
     });
-
   });
 
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
+    navmenu.addEventListener("click", function (e) {
       e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+      this.parentNode.classList.toggle("active");
+      this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
       e.stopImmediatePropagation();
     });
   });
@@ -63,9 +69,9 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
+  const preloader = document.querySelector("#preloader");
   if (preloader) {
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       preloader.remove();
     });
   }
@@ -73,23 +79,25 @@
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
+  let scrollTop = document.querySelector(".scroll-top");
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 100
+        ? scrollTop.classList.add("active")
+        : scrollTop.classList.remove("active");
     }
   }
-  scrollTop.addEventListener('click', (e) => {
+  scrollTop.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  window.addEventListener("load", toggleScrollTop);
+  document.addEventListener("scroll", toggleScrollTop);
 
   /**
    * Animation on scroll function and init
@@ -97,26 +105,26 @@
   function aosInit() {
     AOS.init({
       duration: 600,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
-  window.addEventListener('load', aosInit);
+  window.addEventListener("load", aosInit);
 
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
+  const selectTyped = document.querySelector(".typed");
   if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
+    let typed_strings = selectTyped.getAttribute("data-typed-items");
+    typed_strings = typed_strings.split(",");
+    new Typed(".typed", {
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
     });
   }
 
@@ -128,17 +136,17 @@
   /**
    * Animate the skills items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
+  let skillsAnimation = document.querySelectorAll(".skills-animation");
   skillsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
+      offset: "80%",
+      handler: function (direction) {
+        let progress = item.querySelectorAll(".progress .progress-bar");
+        progress.forEach((el) => {
+          el.style.width = el.getAttribute("aria-valuenow") + "%";
         });
-      }
+      },
     });
   });
 
@@ -146,9 +154,9 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
+        swiperElement.querySelector(".swiper-config").innerHTML.trim(),
       );
 
       if (swiperElement.classList.contains("swiper-tab")) {
@@ -165,103 +173,114 @@
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: ".glightbox",
   });
 
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+  document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
+    let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+    let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+    let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
+    imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
+      initIsotope = new Isotope(
+        isotopeItem.querySelector(".isotope-container"),
+        {
+          itemSelector: ".isotope-item",
+          layoutMode: layout,
+          filter: filter,
+          sortBy: sort,
+        },
+      );
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+    isotopeItem
+      .querySelectorAll(".isotope-filters li")
+      .forEach(function (filters) {
+        filters.addEventListener(
+          "click",
+          function () {
+            isotopeItem
+              .querySelector(".isotope-filters .filter-active")
+              .classList.remove("filter-active");
+            this.classList.add("filter-active");
+            initIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+            if (typeof aosInit === "function") {
+              aosInit();
+            }
+          },
+          false,
+        );
+      });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Initialize subcursos with hidden state and attach toggles
+    const cursos = document.querySelectorAll(".curso-principal");
+
+    function openSub(sub) {
+      // close other open subcursos
+      document
+        .querySelectorAll(".cursos .subcursos.visible")
+        .forEach((other) => {
+          if (other !== sub) closeSub(other);
         });
-        if (typeof aosInit === 'function') {
-          aosInit();
+
+      sub.classList.add("visible");
+      sub.style.opacity = "1";
+      // set to content height for transition
+      sub.style.maxHeight = sub.scrollHeight + "px";
+
+      // after transition, remove max-height to allow dynamic height
+      const onTransitionEnd = function (e) {
+        if (e.propertyName === "max-height") {
+          sub.style.maxHeight = "none";
+          sub.removeEventListener("transitionend", onTransitionEnd);
         }
-      }, false);
-    });
-
-  });
-
-  document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('curso-toggle')) {
-      const curso = event.target.closest('.curso-principal');
-      const subcursos = curso.querySelector('.subcursos');
-  
-      if (subcursos) {
-        subcursos.classList.toggle('visible');
-      }
+      };
+      sub.addEventListener("transitionend", onTransitionEnd);
     }
-  });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.curso-principal').forEach(curso => {
-      const toggleElement = curso.querySelector('.curso-toggle');
-      const subcursos = curso.querySelector('.subcursos');
-  
-      if (toggleElement && subcursos) {
-        toggleElement.addEventListener('click', () => {
-          console.log('Se hizo clic en curso-toggle');
-          subcursos.classList.toggle('visible');
-          console.log('Clases actuales de subcursos:', subcursos.classList);
+    function closeSub(sub) {
+      // set current height then trigger to 0 for animation
+      sub.style.maxHeight = sub.scrollHeight + "px";
+      // force layout
+      sub.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        sub.style.maxHeight = "0px";
+        sub.style.opacity = "0";
+      });
+      sub.classList.remove("visible");
+    }
+
+    cursos.forEach((curso) => {
+      const toggleElement = curso.querySelector(".curso-toggle");
+      const subcursos = curso.querySelector(".subcursos");
+
+      if (!subcursos) return;
+
+      // Initialize styles
+      subcursos.style.overflow = "hidden";
+      subcursos.style.maxHeight = "0px";
+      subcursos.style.opacity = "0";
+      subcursos.style.transition = "max-height 320ms ease, opacity 200ms ease";
+
+      if (toggleElement) {
+        toggleElement.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isOpen = subcursos.classList.contains("visible");
+          if (isOpen) {
+            closeSub(subcursos);
+          } else {
+            openSub(subcursos);
+          }
         });
       }
     });
   });
-  
-
-
-//  document.addEventListener('DOMContentLoaded', () => {
-//    document.querySelectorAll('.curso-principal').forEach(curso => {
-//      const toggleElement = curso.querySelector('.curso-toggle');
-//      const subcursos = curso.querySelector('.subcursos');
-
-//      if (toggleElement && subcursos) {
-//        toggleElement.addEventListener('click', () => {
-//          subcursos.classList.toggle('visible');
-//        });
-//      }
-//    });
-//  });
-  
 })();
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const cursos = document.querySelectorAll('.curso-principal');
-  console.log("Cursos encontrados:", cursos); // Verifica si se están encontrando los cursos
-
-  cursos.forEach(curso => {
-    const toggleElement = curso.querySelector('.curso-toggle');
-    const subcursos = curso.querySelector('.subcursos');
-
-    console.log("Toggle encontrado:", toggleElement);
-    console.log("Subcursos encontrados:", subcursos);
-
-    if (toggleElement && subcursos) {
-      toggleElement.addEventListener('click', () => {
-        subcursos.classList.toggle('visible');
-      });
-    }
-  });
-});
-
-
