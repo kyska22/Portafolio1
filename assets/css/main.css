@@ -753,25 +753,25 @@ section,
 }
 
 .btn-primary-custom:hover {
-  background-color: #149ddd;
-  border-color: #149ddd;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
   color: white;
   transform: translateY(-2px);
 }
 
 .btn-secondary-custom {
   background: transparent;
-  color: #149ddd;
+  color: var(--accent-color);
   padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  border: 2px solid #149ddd;
+  border: 2px solid var(--accent-color);
   transition: all 0.3s ease;
 }
 
 .btn-secondary-custom:hover {
-  background-color: #149ddd;
+  background-color: var(--accent-color);
   color: white;
   transform: translateY(-2px);
 }
@@ -1670,4 +1670,131 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+
+
+.skill-card {
+  height: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(24, 210, 110, 0.25);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(24, 210, 110, 0.12);
+}
+
+.skill-card i {
+  font-size: 34px;
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--heading-color);
+}
+
+.skill-card p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+
+
+
+.portfolio .portfolio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-card-img-wrap {
+  height: 230px;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .portfolio-card-body {
+  flex: 1;
+}
+
+.portfolio .portfolio-card-footer {
+  margin-top: auto;
+}
+
+
+
+
+/* ===== Projects page cleanup ===== */
+
+.portfolio .isotope-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.portfolio .portfolio-item {
+  display: flex;
+}
+
+.portfolio .portfolio-card {
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  background: #050505;
+  border: 1px solid rgba(24, 210, 110, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-card-img-wrap {
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.portfolio .portfolio-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .portfolio-card-body {
+  flex: 1;
+  padding: 24px 24px 12px;
+}
+
+.portfolio .portfolio-card-body p {
+  min-height: 78px;
+}
+
+.portfolio .portfolio-card-footer {
+  padding: 0 24px 24px;
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.portfolio .btn-portfolio-primary {
+  flex: 1;
+}
+
+.portfolio .btn-portfolio-icon {
+  width: 42%;
 }

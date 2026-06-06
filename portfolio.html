@@ -1,447 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: Personal
   * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
   * Updated: Nov 04 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body class="portfolio-page">
+  <body class="portfolio-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="" />
+          <h1 class="sitename">Kyska Harrington | Cloud & Technology</h1>
+        </a>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">Portfolio</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Skills</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Portfolio</h1>
-              <p class="mb-0">In my life I have done many interesting things, but here are just a few things that may be of interest to you.</p>
+    <main class="main">
+      <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Selected Projects</h1>
+                <p class="mb-0">
+                  A curated selection of projects that reflect my path toward
+                  Cloud Solutions Architecture: cloud labs, AI experiments,
+                  automation ideas and real web solutions built for practical
+                  needs.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Projects</li>
+            </ol>
+          </div>
+        </nav>
       </div>
-      <nav class="breadcrumbs">
+
+      <section id="portfolio" class="portfolio section">
         <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="fitRows"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-cloud">Cloud & AI</li>
+              <li data-filter=".filter-web">Web Solutions</li>
+            </ul>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">IA</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/PetLite.png" alt="PetLite LandingPage">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Web App</span>
-                  <h4>PetLite LandingPage</h4>
-                  <p>This project presents a simple petshop landing page, which was made in HTML, CSS and JavaScript.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://landingpage-ten-zeta.vercel.app/" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-link-45deg"></i> Visitar Sitio</a>
-                  <a href="assets/img/portfolio/PetLite.png" class="glightbox btn-portfolio btn-portfolio-icon" title="PetLite LandingPage" data-gallery="portfolio-gallery-app"><i class="bi bi-zoom-in"></i></a>
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <!-- GymBot -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/product-1.jpg"
+                      alt="GymBot MVP"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Cloud & AI</span>
+                    <h4>GymBot MVP</h4>
+                    <p>
+                      AI assistant prototype designed to support gym users with
+                      training guidance, using Python and Amazon Bedrock
+                      concepts.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://github.com/limonheiro/chat_academia"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="View repository"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="GymBot">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Inteligencia Artificial</span>
-                  <h4>GymBot MVP</h4>
-                  <p>O GymBot foi projetado inicialmente como um Produto Mínimo Viável (MVP), com ênfase em: Python, Amazon Bedrock.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://github.com/limonheiro/chat_academia" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-github"></i> Ver Código</a>
-                  <a href="assets/img/portfolio/product-1.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="GymBot MVP" data-gallery="portfolio-gallery-product"><i class="bi bi-zoom-in"></i></a>
+              <!-- AZ-204 -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/AZ-204.webp"
+                      alt="AZ-204 Bootcamp Challenge"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Azure / Cloud</span>
+                    <h4>AZ-204 Bootcamp Challenge</h4>
+                    <p>
+                      Practical Azure development challenge involving Azure
+                      Functions, Docker and Azure DevOps learning labs.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://github.com/kyska22/Bootcamp-Microsoft-Certification-Challenge2-AZ-204/tree/main"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="View repository"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/branding-1.jpeg" alt="AWS AIF-C01">
+              <!-- AWS AIF-C01 -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/branding-1.jpeg"
+                      alt="AWS AIF-C01 Study Guide"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">AWS / AI</span>
+                    <h4>AWS AIF-C01 Study Guide</h4>
+                    <p>
+                      Structured study guide created to prepare for the AWS
+                      Certified AI Practitioner certification.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://github.com/kyska22/AIF-C01"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="View guide"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
                 </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Certificación / Cloud</span>
-                  <h4>Guía de Estudio AWS AIF-C01</h4>
-                  <p>A study guide to prepare for the AWS Certified AI Practitioner (AIF-C01) examination, containing essential summaries, resources, and practice topics.</p>
+              </div>
+
+              <!-- SageMaker -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/rekognitioni.webp"
+                      alt="AWS SageMaker Canvas AI"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">AWS / Machine Learning</span>
+                    <h4>AWS SageMaker Canvas AI</h4>
+                    <p>
+                      Exploration of pre-trained AI models for image, text and
+                      voice analysis using AWS machine learning tools.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="assets/img/portfolio/rekognitioni.webp"
+                      class="glightbox btn-portfolio btn-portfolio-icon"
+                      title="AWS SageMaker Canvas"
+                      data-gallery="portfolio-gallery-cloud"
+                    >
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                  </div>
                 </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://github.com/kyska22/AIF-C01" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-github"></i> Ver Guía</a>
-                  <a href="assets/img/portfolio/branding-1.jpeg" class="glightbox btn-portfolio btn-portfolio-icon" title="AWS AIF-C01 Study Guide" data-gallery="portfolio-gallery-branding"><i class="bi bi-zoom-in"></i></a>
+              </div>
+
+              <!-- Natty or Not -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/OSI.png"
+                      alt="Lab Natty or Not"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Generative AI</span>
+                    <h4>Lab “Natty or Not”</h4>
+                    <p>
+                      Generative AI experiment focused on creating realistic
+                      content and analyzing the boundary between artificial and
+                      natural media.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://github.com/kyska22/lab-natty-or-not?tab=readme-ov-file"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="View repository"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Viviana -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/viviana.png"
+                      alt="Viviana Arrieta - Protocolo V-CORE"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Web Solution</span>
+                    <h4>Viviana Arrieta — V-CORE™</h4>
+                    <p>
+                      Corporate website for a strategic mentoring brand focused
+                      on human behavior, leadership and high-performance teams.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://vivianarrieta.com"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="Visit website"
+                    >
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Asesorías al Migrante -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/migrante.png"
+                      alt="Asesorías al Migrante"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Web Solution</span>
+                    <h4>Asesorías al Migrante</h4>
+                    <p>
+                      Website for legal and migration consulting services,
+                      focused on trust, clarity and appointment conversion.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://asesoriasal-migrante.vercel.app/"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="Visit website"
+                    >
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Harmony -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/harmony.png"
+                      alt="Harmony Harrington Photography"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Web Solution</span>
+                    <h4>Harmony Harrington</h4>
+                    <p>
+                      Professional photography portfolio designed to present
+                      visual work with elegance, clarity and a refined user
+                      experience.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://harmony-harrington.vercel.app/"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="Visit website"
+                    >
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PetLite -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-card-img-wrap">
+                    <img
+                      src="assets/img/portfolio/PetLite.png"
+                      alt="PetLite Landing Page"
+                    />
+                  </div>
+                  <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Web Solution</span>
+                    <h4>PetLite Landing Page</h4>
+                    <p>
+                      Responsive landing page for a petshop concept, built to
+                      practice layout, visual hierarchy and user-focused
+                      sections.
+                    </p>
+                  </div>
+                  <div class="portfolio-card-footer">
+                    <a
+                      href="portfolio-details.html"
+                      class="btn-portfolio btn-portfolio-primary"
+                    >
+                      <i class="bi bi-info-circle"></i> Case Study
+                    </a>
+                    <a
+                      href="https://landingpage-ten-zeta.vercel.app/"
+                      target="_blank"
+                      class="btn-portfolio btn-portfolio-icon"
+                      title="Visit website"
+                    >
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-card card-book">
-                <div class="book-3d-container">
-                  <div class="book-3d-cover">
-                    <img src="assets/img/portfolio/libro01.jpg" alt="Soy feliz, porque me enamoré de ti">
-                  </div>
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Novela / Romance</span>
-                  <h4>Soy feliz, porque me enamoré de ti</h4>
-                  <p>En una noche estrellada, una mujer atrapada en su soledad se encuentra en una plaza, donde su mejor amiga, Daniela, la empuja a socializar. Ahí conoce a un joven carismático, alto y moreno, que la atrae de inmediato. Con ojos verdes que reflejan la luna, él la hace reír y olvidarse de sus temores. A pesar de la chispa que surge entre ellos, ella lucha por abrir su corazón, atormentada por la diferencia de edad y las cicatrices de un amor pasado.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://www.wattpad.com/story/378475174-soy-feliz-porque-me-enamore-de-ti" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-book"></i> Leer en Wattpad</a>
-                  <a href="assets/img/portfolio/libro01.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="Soy feliz, porque me enamoré de ti" data-gallery="portfolio-gallery-books"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/game.png" alt="Secret Number game">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Web Game</span>
-                  <h4>Secret Number game</h4>
-                  <p>This is a game that allows you to guess a secret random number between 1 and 100, built with HTML, CSS, and modern programming logic in JavaScript.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://jogo-numero-secreto-rose-mu-94.vercel.app" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-play-fill"></i> Jugar</a>
-                  <a href="assets/img/portfolio/game.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Secret Number game" data-gallery="portfolio-gallery-app"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/AZ-204.webp" alt="AZ-204 Bootcamp">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Azure / Cloud</span>
-                  <h4>AZ-204 Bootcamp Challenge</h4>
-                  <p>Azure Functions, Docker & Azure DevOps. Practical labs and challenges completed for the Microsoft Certified: Azure Developer Associate certification.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://github.com/kyska22/Bootcamp-Microsoft-Certification-Challenge2-AZ-204/tree/main" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-github"></i> Ver Desafío</a>
-                  <a href="assets/img/portfolio/AZ-204.webp" class="glightbox btn-portfolio btn-portfolio-icon" title="Bootcamp AZ-204" data-gallery="portfolio-gallery-product"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/JavaScript.png" alt="Programming Logic in JavaScript">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Lógica / JavaScript</span>
-                  <h4>Lógica de Programación JavaScript</h4>
-                  <p>Introduction to JavaScript Programming Logic, covering fundamental concepts, loops, variables, and functional logic for coding beginners.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://github.com/kyska22/TICemTrilhas/tree/main" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-github"></i> Ver Lógica</a>
-                  <a href="assets/img/portfolio/JavaScript.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Lógica de Programación JS" data-gallery="portfolio-gallery-branding"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-card card-book">
-                <div class="book-3d-container">
-                  <div class="book-3d-cover">
-                    <img src="assets/img/portfolio/libro02.jpg" alt="Un día como cualquier otro">
-                  </div>
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Novela / Suspenso</span>
-                  <h4>Un día como cualquier otro</h4>
-                  <p>Durante unas emocionantes vacaciones de verano, un grupo de amigos decide explorar los alrededores de su vecindario en busca de aventuras. Sin embargo, deberían haber prestado más atención a las advertencias de una madre antes de adentrarse en lugares que esconden más de lo que parece.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://www.wattpad.com/story/377413626-un-d%C3%ADa-como-cualquier-otro" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-book"></i> Leer en Wattpad</a>
-                  <a href="assets/img/portfolio/libro02.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="Un día como cualquier otro" data-gallery="portfolio-gallery-books"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/rekognitioni.webp" alt="AWS SageMaker Canvas">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">AWS / Machine Learning</span>
-                  <h4>AWS SageMaker Canvas AI</h4>
-                  <p>Use pre-trained AI models to automatically analyze, transcribe, and synthesize voice, text, and images with SageMaker Canvas from AWS for easier and more successful integrations.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="portfolio-details.html" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-info-circle"></i> Detalles</a>
-                  <a href="assets/img/portfolio/rekognitioni.webp" class="glightbox btn-portfolio btn-portfolio-icon" title="AWS SageMaker Canvas" data-gallery="portfolio-gallery-app"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/OSI.png" alt="Lab Generative AI">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Inteligencia Artificial</span>
-                  <h4>Lab "Natty or Not" (Generative AI)</h4>
-                  <p>A project exploring generative AI tools to create realistic content, testing the limits of what is artificial and what is natural. Generates text, images, and audio to run similarity benchmarks.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://github.com/kyska22/lab-natty-or-not?tab=readme-ov-file" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-github"></i> Ver Código</a>
-                  <a href="assets/img/portfolio/OSI.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Lab Natty or Not" data-gallery="portfolio-gallery-product"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/harmony.png" alt="Harmony Harrington Photography">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Web App / Portafolio</span>
-                  <h4>Harmony Harrington</h4>
-                  <p>Fotografía profesional de bodas, retratos y arte. Un portafolio minimalista y elegante diseñado para destacar galerías fotográficas artísticas de alta calidad.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://harmony-harrington.vercel.app/" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-link-45deg"></i> Visitar Sitio</a>
-                  <a href="assets/img/portfolio/harmony.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Harmony Harrington Photography" data-gallery="portfolio-gallery-app"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/migrante.png" alt="Asesorías al Migrante">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Web App / Legal</span>
-                  <h4>Asesorías al Migrante</h4>
-                  <p>Portal web para asesoría legal y migratoria de abogados expertos. Ofrece reservas de citas y gestión de consultas presenciales y online en derecho migratorio.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://asesoriasal-migrante.vercel.app/" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-link-45deg"></i> Visitar Sitio</a>
-                  <a href="assets/img/portfolio/migrante.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Asesorías al Migrante" data-gallery="portfolio-gallery-app"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-card">
-                <div class="portfolio-card-img-wrap">
-                  <img src="assets/img/portfolio/viviana.png" alt="Viviana Arrieta - Protocolo V-CORE">
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Branding / Consultoría</span>
-                  <h4>Viviana Arrieta — V-CORE™</h4>
-                  <p>Sitio corporativo oficial para mentoría estratégica en comportamiento humano y el Protocolo V-CORE™, diseñado para optimizar el rendimiento de equipos de trabajo.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://vivianarrieta.com" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-link-45deg"></i> Visitar Sitio</a>
-                  <a href="assets/img/portfolio/viviana.png" class="glightbox btn-portfolio btn-portfolio-icon" title="Viviana Arrieta — Protocolo V-CORE" data-gallery="portfolio-gallery-branding"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-card card-book">
-                <div class="book-3d-container">
-                  <div class="book-3d-cover">
-                    <img src="assets/img/portfolio/libro03.jpg" alt="Un viaje diferente">
-                  </div>
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Novela / Terror</span>
-                  <h4>Un viaje diferente</h4>
-                  <p>Natalia trabaja para una universidad que realiza inspecciones periódicas en centros educativos. Todo parece una simple aventura, pero durante una de las visitas, extraños sucesos comienzan a manifestarse. Una historia de terror inventada para entretener a sus compañeros parece volverse demasiado real cuando una desconocida repite los detalles con exactitud. ¿Qué es lo que realmente habita en esa casa?</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="portfolio-details.html" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-info-circle"></i> Detalles</a>
-                  <a href="assets/img/portfolio/libro03.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="Un viaje diferente" data-gallery="portfolio-gallery-books"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-card card-book">
-                <div class="book-3d-container">
-                  <div class="book-3d-cover">
-                    <img src="assets/img/portfolio/reina_corona.jpg" alt="La Reina sin Corona">
-                  </div>
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Novela / Historica</span>
-                  <h4>La Reina sin Corona</h4>
-                  <p>Narisa nació para gobernar. Eso fue lo único que decidió su familia por ella. <br> A los tres años fue arrancada de los brazos de su madre y enviada a un monasterio oculto entre montañas, donde fue moldeada para convertirse en la soberana perfecta: inteligente, letal, disciplinada y capaz de cargar un reino entero sobre sus hombros. Quince años después regresa al castillo para reclamar el lugar que siempre le perteneció. Pero nada es como esperaba.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://www.webnovel.com/pt/book/35879722608842005" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-book"></i> Leer en WebNovel</a>
-                  <a href="assets/img/portfolio/reina_corona.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="La Reina sin Corona" data-gallery="portfolio-gallery-books"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-card card-book">
-                <div class="book-3d-container">
-                  <div class="book-3d-cover">
-                    <img src="assets/img/portfolio/frio_sangre.jpg" alt="El frio en la sangre">
-                  </div>
-                </div>
-                <div class="portfolio-card-body">
-                  <span class="portfolio-tag">Novela / Venganza</span>
-                  <h4>El frio en la sangre</h4>
-                  <p>En la opulenta mansión "Los Olivos", el apellido Valeriano es sinónimo de poder, boxeo y una jerarquía inquebrantable. Para Elena, la menor y única hija de esta dinastía, la mansión no es un hogar, sino una jaula dorada. Mientras sus cuatro hermanos son entrenados para ser "machos alfa" y herederos de un imperio logístico, ella se refugia en el único lenguaje que la hace sentir libre: la lógica de las matemáticas y la programación.</p>
-                </div>
-                <div class="portfolio-card-footer">
-                  <a href="https://www.webnovel.com/pt/book/35359876100488105/96370962861188281" target="_blank" class="btn-portfolio btn-portfolio-primary"><i class="bi bi-book"></i> Leer en WebNovel</a>
-                  <a href="assets/img/portfolio/frio_sangre.jpg" class="glightbox btn-portfolio btn-portfolio-icon" title="El frio en la sangre" data-gallery="portfolio-gallery-books"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename"></h3>
-      <p>Thank you for visiting my site!!!</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/kyska22" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kyskaharrington/" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </div>
+    <footer id="footer" class="footer dark-background">
       <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
+        <h3 class="sitename"></h3>
+        <p>
+          Building practical solutions through cloud computing, automation and
+          continuous learning.
+          <br />
+          <a href="services.html">Extended learning path</a>
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://github.com/kyska22" target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/kyskaharrington/" target="_blank"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Personal</strong>
+            <span>All Rights Reserved</span>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
