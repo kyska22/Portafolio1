@@ -65,6 +65,8 @@ This combination helps me approach architecture with awareness of operations, se
 
 ### Web Solutions
 
+- [Digital Aid Kit](https://dak-azure.vercel.app/): Corporate technology website presenting an integrated ecosystem of web, automation, AI and digital growth solutions.
+
 - [Viviana Arrieta - V-CORE](https://vivianarrieta.com): Corporate website for a strategic mentoring and leadership brand.
 
 - [Asesorias al Migrante](https://asesoriasal-migrante.vercel.app/): Website for legal and migration consulting services.

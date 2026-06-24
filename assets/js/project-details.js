@@ -110,6 +110,28 @@ const projects = {
       "Considered transparency and responsible AI use.",
     ],
   },
+  digitalaidkit: {
+    title: "Digital Aid Kit",
+    summary:
+      "A corporate website that presents an integrated ecosystem of digital services for business growth.",
+    image: "assets/img/portfolio/digitalaidkit.png",
+    category: "Web Solution",
+    role: "Solution design and frontend development",
+    technologies: "Web development, responsive design, AI and automation positioning",
+    link: "https://dak-azure.vercel.app/",
+    linkLabel: "Visit Website",
+    description:
+      "Digital Aid Kit presents technology, strategy and growth services through a modern corporate experience. The site brings together web development, SEO, management systems, AI automation, digital marketing, applications and IoT under one clear value proposition.",
+    challenge:
+      "A broad service portfolio can easily feel fragmented or difficult to understand. The challenge was to communicate multiple technical capabilities as one coherent ecosystem while keeping the experience approachable for business decision-makers.",
+    solution:
+      "The website uses a strong visual identity, direct messaging, structured navigation and prominent calls to action to connect technical services with business outcomes such as efficiency, sales and controlled growth.",
+    highlights: [
+      "Unified multiple digital services under a single positioning strategy.",
+      "Created a responsive, high-impact corporate presentation.",
+      "Connected technical capabilities with clear business value.",
+    ],
+  },
   vcore: {
     title: "Viviana Arrieta - V-CORE",
     summary:
